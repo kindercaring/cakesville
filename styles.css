@@ -1,0 +1,738 @@
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: "Sour Gummy", serif;
+    background-color: #FFEAA7;
+    
+   
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/rb_2147543047.png);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.05;
+    /* Adjust this for desired transparency */
+    z-index: -1;
+}
+header {
+    height: 100%;
+}
+nav {
+    display: flex;
+    background-color: #6B3A1E;
+    box-shadow: 12px 0 20px rgba(0, 0, 0, 0.5);
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 2em;
+    position: sticky;
+    top: 0;
+    
+}
+nav a img {
+    width: 2em;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin: 0 8px;
+}
+nav ul li a {
+    color: #fff;
+    padding: 3px;
+    text-decoration: none;
+}
+
+
+#inactive {
+    position: relative;
+    padding-bottom: 22px;
+    display: inline;
+}
+#inactive::after {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    height: 1.6px;
+    width: 0%;
+    left: 0;
+    bottom: 15.5px;
+    transition: 0.3s;
+}
+#inactive:hover:after {
+    width: 100%;
+}
+.active {
+    border-bottom: #fff solid 1.6px;
+}
+nav button {
+    display: none;
+}
+
+
+
+/* DROPDOWN */
+/* Parent container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    margin-top: 3px;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Optional hover effect for links */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* DROPDOWN */
+
+
+/* SLIDE MENU */
+/* Main container */
+.menu-container {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out;
+}
+.menu-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+.menu-container ul li {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+}
+.menu-container ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+}
+.menu-container ul li a:hover {
+    background-color: #e8e8e8;
+}
+/* Submenu styles */
+.submenu {
+    display: none;
+    padding-right: 15px;
+    background-color: #e8e8e8;
+}
+.submenu li {
+    border-bottom: none;
+}
+/* Toggle button */
+.menu-toggle {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    z-index: 1000;
+    transition: background-color 0.2s ease;
+}
+.menu-toggle:hover {
+    background-color: #555;
+}
+.menu-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 2em;
+    z-index: 1000;
+    transition: 0.2s ease;
+}
+
+/* SLIDE MENU */
+
+
+
+
+
+
+
+.header-container span {
+    font-family: "Kurale", serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em 2em;
+
+}
+
+.header-container span div:nth-child(1) {
+    flex-basis: 50%;
+}
+
+.header-container span div h1 {
+    font-size: 3em;
+    margin: 0;
+    line-height: 1;
+}
+
+.header-container span div p {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.wrapper {
+    padding: 1em;
+    width: 200px;
+    height: 200px;
+    background-image: url(header\ image.jpg);
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+    animation: animate 11s linear infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        border-radius: 51% 49% 75% 52% / 62% 44% 20% 88%;
+    }
+
+    30% {
+        border-radius: 73% 38% 48% 52% / 44% 36% 56% 38%;
+    }
+
+    60% {
+        border-radius: 26% 49% 48% 67% / 50% 47% 55% 38%;
+    }
+}
+.cta {
+    text-align: center;
+    margin-top: 1em;
+}
+.cta .cta-button {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #FF69B4;
+    border: #fff 2px solid;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: .7em;
+    transition: .4s;
+}
+.cta .cta-button:hover {
+    background-color: #ff49a4;
+}
+
+
+
+
+
+
+/* MAIN */
+main {
+    margin: 0;
+    padding: 0;
+}
+main section {
+    padding: 0 2em;
+}
+section h2 {
+    font-size: 1.6em;
+}
+main #why-choose-us {
+    background-color: #6B3A1E;
+    padding: 1em 2em;
+    margin-top: 3em;
+}
+main #why-choose-us h2 {
+    color: #fff;
+}
+main #why-choose-us ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+main #why-choose-us ul div {
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    height: auto;
+    padding: 20px;
+}
+main #why-choose-us ul div span #icon {
+    font-size: 3.5em;
+    margin: 5px;
+    color: #ffffff;
+}
+main #why-choose-us ul div h3 {
+    font-size: 1.3em;
+    color: #FF69B4;
+    margin: 2px 0;
+}
+main #why-choose-us ul div h4 {
+    font-size: .8em;
+    margin: 2px 0;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CAKE CARDS */
+#cake-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    /* Center the section */
+}
+.cake-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+.cake-card:hover {
+    transform: translateY(-10px);
+    /* Lift the card slightly */
+}
+.cake-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* Ensures the image fits perfectly */
+}
+.cake-card h3 {
+    font-size: 1.5em;
+    margin: 5px 0;
+    color: #6B3A1E;
+}
+.cake-card p {
+    font-size: 1em;
+    margin: 10px;
+    padding: 0 10px;
+    color: #555;
+}
+.cake-card .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #FF69B4;
+    /* Highlight price in red */
+}
+.cake-card button {
+    background-color: #FF69B4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+.cake-card button:hover {
+    background-color: #ff49a4;
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #cake-cards {
+        grid-template-columns: 1fr;
+        /* Single column for smaller screens */
+        padding: 10px;
+    }
+
+    .cake-card {
+        margin: 0 auto;
+        /* Center align cards */
+    }
+}
+/* MAIN */
+
+
+
+
+#whatsapp {
+    background-color: #25d366;
+    color: white;
+    position: fixed;
+    bottom: 1.4em;
+    left: 10px;
+    font-size: 3em;
+    padding: .3em;
+    border-radius: 50%;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+footer {
+    background-color: #6B3A1E;
+    display:block;
+    padding: 1em 2em;
+}
+footer div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer div p {
+    color: #fff;
+    padding: 1em 0;
+    margin: 0;
+}
+footer div div i {
+    color: #ffffff;
+    border: #fff solid 1.6px;
+    padding: .4em .5em;
+    margin: 0 4px;
+    font-size: 1.4em;
+    border-radius: 50%;
+    transition: .3s;
+}
+footer div div i:hover {
+    background-color: #fff;
+    color: #6B3A1E;
+}
+footer h6 {
+    margin: .3em 0;
+    text-align: center;
+    
+}
+footer h6 .developer {
+    text-decoration: underline;
+    color: #fff;
+    font-size: 1.2em;
+    transition: .3s ease-in-out;
+}
+footer h6 .developer:hover {
+    font-size: 1.3em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width:450px) {
+    .header-container {
+        margin-top: 1em;
+    }
+
+    .header-container span div h1 {
+        font-size: 3.5em;
+        padding: 10px 0;
+        line-height: 1.2;
+    }
+
+    .header-container span div p {
+        font-size: 2.4em;
+        line-height: 2;
+    }
+}
+
+@media only screen and (max-width:512px) {
+    nav {
+        padding: 15px 8px;
+    }
+    nav button #icon {
+        font-size: .8em;
+    }
+    nav a img {
+        width: 1.7em;
+        padding: 2px;
+        border-radius: 50%;
+    }
+
+
+
+    main {
+        margin: 0;
+        padding: 0;
+    }
+    main section {
+        padding: 15px 8px;
+    }
+    main #why-choose-us {
+        padding: 15px 8px;
+    }
+
+    main #why-choose-us ul div {
+        width: 100px;
+        padding: 10px;
+    }
+
+    main #why-choose-us ul div span #icon {
+        font-size: 3em;
+        margin: 5px;
+    }
+
+    main #why-choose-us ul div h3 {
+        font-size: 1em;
+        margin: 2px 0;
+        line-height: 1;
+    }
+
+    main #why-choose-us ul div h4 {
+        font-size: .6em;
+        margin: 4px 0;
+        line-height: 1;
+    }
+
+    footer {
+        padding: 15px 8px;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    nav button {
+        display: initial;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .header-container span {
+        display: grid;
+        place-items: center;
+        padding: 10px 20px;
+    }
+
+    .header-container span div {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .header-container span div h1 {
+        font-size: 3.5em;
+        padding: 10px 0;
+    }
+
+    .header-container span div p {
+        font-size: 2em;
+        line-height: 1;
+    }
+}
+
+
+
+@media only screen and (min-width:1000px) {
+    nav {
+        padding: 10px 6em;
+    }
+
+    nav a img {
+        width: 3em;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .cta {
+        margin-top: 0;
+    }
+
+    .cta .cta-button {
+        padding: 20px;
+        font-size: 1em;
+    }
+
+    header .header-container {
+        padding: 1em 4em;
+    }
+
+    .header-container span div h1 {
+        font-size: 4em;
+        margin: 0;
+        line-height: 1;
+    }
+
+    .header-container span div p {
+        font-size: 2.5em;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
+
+    .wrapper {
+        padding: 1em;
+        width: 300px;
+        height: 300px;
+
+    }
+
+
+
+
+
+
+
+
+    main {
+        margin: 0;
+        padding: 0;
+    }
+
+    main section {
+        padding: 0 6%;
+        margin: 5em 0;
+    }
+
+    main #why-choose-us {
+        padding: 1em 6em;
+    }
+
+    footer {
+        padding: 1em 6em;
+    }
+}
+@media only screen and (min-width:1500px) {
+    nav {
+        padding: 10px 7em;
+    }
+    nav a img {
+        width: 4em;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    header .header-container {
+        padding: 5em;
+    }
+    .header-container span div h1 {
+        font-size: 5.5em;
+        margin: 0;
+        line-height: 1;
+    }
+    .header-container span div p {
+        font-size: 3em;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
+    .wrapper {
+        padding: 1em;
+        width: 450px;
+        height: 450px;
+
+    }
+
+
+
+    .cta .cta-button {
+        padding: 20px;
+        font-size: 1.4em;
+    }
+
+    main {
+        margin: 0;
+        padding: 0;
+    }
+    main section {
+        padding: 0 7em;
+        margin: 5em 0;
+    }
+    main #why-choose-us {
+        padding: 2em 7em;
+    }
+    main #why-choose-us ul div {
+        width: 250px;
+        padding: 20px 2em;
+    }
+    main #why-choose-us ul div span #icon {
+        font-size: 5em;
+        margin: 10px;
+    }
+    main #why-choose-us ul div h3 {
+        font-size: 1.6em;
+    }
+    main #why-choose-us ul div h4 {
+        font-size: 1em;
+    }
+
+
+
+
+    footer {
+        padding: 1em 7em;
+    }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Order the best custom cakes in Lagos. Freshly baked cakes for birthdays, weddings, and events. Affordable, delicious, and delivered anywhere in Lagos.">
+    <meta name="keywords"
+        content="Cakes in Lagos, Birthday Cakes Lagos, Wedding Cakes Lagos, Custom Cakes Lagos, Cake Delivery Lagos">
+    <meta name="author" content="Your Cake Business Name">
+    <script src="https://kit.fontawesome.com/15fa915322.js" crossorigin="anonymous"></script>
+    <title>Cakesville Lagos | Freshly Baked & Delivered</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <nav>
+        <a href="index.html" class="logo_link"><img src="logo.png" alt="logo"></a>
+
+        <ul>
+            <li><a href="" class="active">Home</a></li>
+            <div class="dropdown">
+                <li><a href="">Birthday Cakes <i class="fa-solid fa-caret-down"></i></a></li>
+                <div class="dropdown-content">
+                    <a href="#">Fondant Cakes</a>
+                    <a href="#">Dessert Cakes</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <li><a href="" class="dropbtn">Special Cakes <i class="fa-solid fa-caret-down"></i></a></li>
+                <div class="dropdown-content">
+                    <a href="#">Wedding Cakes</a>
+                    <a href="#">Valentine Cakes</a>
+                    <a href="#">Cupcakes</a>
+                    <a href="#">Fruit Cakes</a>
+                </div>
+            </div>
+            <li><a href="" id="inactive">Contact us</a></li>
+        </ul>
+
+        <button class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-burger" id="icon"></i></button>
+    </nav>
+    <header>
+
+
+
+
+        <!-- Slide-In Menu -->
+        <div class="menu-container" id="slideMenu">
+            <button class="menu-close" onclick="toggleMenu()" style="display: none;">✖</button>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li>
+                    <a href="#services" onclick="toggleSubmenu(event)">Birthday Cakes <i class="fa fa-caret-down"
+                            id="icon"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#custom-cakes">Fondant Cakes</a></li>
+                        <li><a href="#wedding-cakes">Dessert Cakes</a></li>
+                        <li><a href="#birthday-cakes">Cupcakes</a></li>
+                        <li><a href="#birthday-cakes">Fruit Cakes</a></li>
+                    </ul>
+                </li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li>
+                    <a href="#about" onclick="toggleSubmenu(event)">Special Cakes<i class="fa fa-caret-down"
+                            id="icon"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#team">Wedding Cakes</a></li>
+                        <li><a href="#history">Valentine Cakes</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="header-container">
+            <span>
+                <div>
+                    <p>Freshly baked cakes<br>for every occasion,</p>
+                    <h1>Delivered anywhere in Lagos!</h1>
+                </div>
+
+                <div class="wrapper"></div>
+            </span>
+
+        </div>
+        <h1 class="cta"><a href="#popular-cakes" class="cta-button">Order Now!</a></h1>
+    </header>
+
+
+
+    <main>
+        <section id="why-choose-us">
+            <h2>Why Choose us?</h2>
+            <ul>
+                <div>
+                    <span><i class="fa-solid fa-cake-candles" id="icon"></i></span>
+                    <h3>Freshly Baked Daily</h3>
+                    <h4>Every cake is made with the finest ingredients.</h4>
+                </div>
+
+                <div>
+                    <span><i class="fa-solid fa-palette" id="icon"></i></span>
+                    <h3>Custom Designs</h3>
+                    <h4>Your dream cake, designed to perfection.</h4>
+                </div>
+
+                <div>
+                    <span><i class="fa-solid fa-piggy-bank" id="icon"></i></span>
+                    <h3>Affordable Pricing</h3>
+                    <h4>Premium cakes at prices that suit every budget.</h4>
+                </div>
+
+                <div>
+                    <span><i class="fa-solid fa-truck" id="icon"></i></span>
+                    <h3>Delivery Across Lagos</h3>
+                    <h4>From Ikeja to Lekki, we’ll deliver your cake right to your door.
+                    </h4>
+                </div>
+            </ul>
+        </section>
+
+
+        <section id="popular-cakes">
+            <h2>Our Most Popular Cakes</h2>
+            <section id="cake-cards">
+                <div class="cake-card">
+                    <img src="https://res.cloudinary.com/dhjvwgspd/image/upload/v1735465694/IMG-20241218-WA0113_gbgsag.jpg"
+                        alt="Chocolate Cake" />
+                    <h3>Chocolate Cake</h3>
+                    <p>Rich and moist chocolate cake, perfect for all occasions.</p>
+                    <span class="price">₦5,000</span> <br>
+                    <button>Order Now</button>
+                </div>
+
+                <div class="cake-card">
+                    <img src="https://res.cloudinary.com/dhjvwgspd/image/upload/v1735465696/IMG-20241227-WA0007_yilebk.jpg"
+                        alt="Vanilla Cake" />
+                    <h3>Vanilla Cake</h3>
+                    <p>Classic vanilla cake with buttercream frosting.</p>
+                    <span class="price">₦4,500</span> <br>
+                    <button>Order Now</button>
+                </div>
+
+                <div class="cake-card">
+                    <img src="https://res.cloudinary.com/dhjvwgspd/image/upload/v1735465681/IMG-20241218-WA0032_rhjt7b.jpg"
+                        alt="Red Velvet Cake" />
+                    <h3>Red Velvet Cake</h3>
+                    <p>Soft and creamy red velvet cake, topped with cream cheese.</p>
+                    <span class="price">₦61,000</span> <br>
+                    <button>Order Now</button>
+                </div>
+
+                <div class="cake-card">
+                    <img src="https://res.cloudinary.com/dhjvwgspd/image/upload/v1735465680/IMG-20241218-WA0014_snbsp5.jpg"
+                        alt="Red Velvet Cake" />
+                    <h3>Sports Cake</h3>
+                    <p>Soft and creamy, topped with cream cheese.</p>
+                    <span class="price">₦16,000</span> <br>
+                    <button>Order Now</button>
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- <section id="contact">
+            <h2>Contact Us</h2>
+            <p><strong>Location:</strong> [Your Address], Lagos, Nigeria</p>
+            <p><strong>Phone:</strong> +234 [Your Phone Number]</p>
+            <p><strong>Email:</strong> <a href="mailto:[Your Email Address]">[Your Email Address]</a></p>
+            <p>Follow us:
+                <a href="https://instagram.com" target="_blank">Instagram</a> |
+                <a href="https://facebook.com" target="_blank">Facebook</a> |
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+            </p>
+        </section> -->
+    </main>
+
+    <a href="https://wa.me/+2348031981914?text=Hello,%20I'd%20like%20to%20order%20a%20Cake"
+        style="text-decoration: none;"><i class="fa-brands fa-whatsapp fa-bounce" id="whatsapp"></i></a>
+
+
+    <footer>
+        <div>
+            <p>&copy; 2024 Cakesville Lagos. All Rights Reserved.</p>
+
+            <div>
+                <a href="https://www.instagram.com/cakes__ville/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/+2348031981914"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <h6><a href="https://wa.me/+2348054568394" class="developer">Contact the developer/designer</a></h6>
+    </footer>
+</body>
+<script>
+    // Toggle main menu
+    function toggleMenu() {
+        const menu = document.getElementById('slideMenu');
+        menu.style.left = menu.style.left === '0px' ? '-250px' : '0px';
+    }
+
+    // Toggle submenus
+    function toggleSubmenu(event) {
+        event.preventDefault(); // Prevent navigation
+        const submenu = event.target.nextElementSibling; // Get the submenu
+        if (submenu.style.display === 'block') {
+            submenu.style.display = 'none'; // Hide submenu
+        } else {
+            submenu.style.display = 'block'; // Show submenu
+        }
+    }
+
+
+    function toggleMenu() {
+        const menu = document.getElementById('slideMenu');
+        const toggleButton = document.querySelector('.menu-toggle');
+        const closeButton = document.querySelector('.menu-close');
+
+        if (menu.style.right === '0px') {
+            menu.style.right = '-250px'; // Hide menu
+            toggleButton.style.display = 'block'; // Show toggle button
+            closeButton.style.display = 'none'; // Hide close button
+        } else {
+            menu.style.right = '0px'; // Show menu
+            toggleButton.style.display = 'none'; // Hide toggle button
+            closeButton.style.display = 'block'; // Show close button
+        }
+    }
+
+</script>
+
+</html>
