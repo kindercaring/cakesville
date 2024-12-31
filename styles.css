@@ -36,7 +36,7 @@ nav {
     padding: 5px 2em;
     position: sticky;
     top: 0;
-    
+    z-index: 999;
 }
 nav a img {
     width: 2em;
@@ -140,6 +140,7 @@ nav button {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
     transition: right 0.3s ease-in-out;
+    z-index: 1000;
 }
 .menu-container ul {
     list-style: none;
